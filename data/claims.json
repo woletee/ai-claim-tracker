@@ -439,28 +439,5 @@
   "imagePage": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
   "image": "img/c22.jpg",
   "imageCredit": "anthropic.com"
- },
- {
-  "id": "i1",
-  "date": "2026-10",
-  "claim": "TEST claim for the bot",
-  "who": "Example Corp",
-  "status": "disputed",
-  "verdict": "Test submission. Will be removed.",
-  "detail": "Test submission. Will be removed.",
-  "sources": [
-   {
-    "label": "bun.com",
-    "url": "https://bun.com/blog/bun-in-rust"
-   },
-   {
-    "label": "infoq.com",
-    "url": "https://www.infoq.com/news/2026/09/bun-ai-rewrite-zig-rust-4-months/"
-   }
-  ],
-  "issue": "https://github.com/woletee/ai-claims-tracker/issues/1",
-  "image": "img/i1.jpg",
-  "imageCredit": "bun.com",
-  "imagePage": "https://bun.com/blog/bun-in-rust"
  }
 ]
