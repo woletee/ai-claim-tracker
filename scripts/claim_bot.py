@@ -176,7 +176,7 @@ def add(event):
             print("image skipped:", page, type(ex).__name__, ex)
     claims.append(entry)
     DATA.write_text(json.dumps(claims, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    write_comment("Added to the AI Claim Tracker. It will be live at https://woletee.github.io/ai-claims-tracker/ in a minute or two. Thanks!")
+    write_comment("Added to the AI Claim Tracker. It will be live at https://woletee.github.io/ai-claim-tracker/ in a minute or two. Thanks!")
     print("added", cid, entry["claim"])
     return 0
 
