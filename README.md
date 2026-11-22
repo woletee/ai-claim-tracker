@@ -1,4 +1,4 @@
-# AI Claims Tracker
+# AI Claim Tracker
 
 Big AI claims, and whether they held up. Every verdict links to its evidence.
 
