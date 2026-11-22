@@ -1,0 +1,73 @@
+name: Submit a claim
+description: Add a big AI claim and what the evidence shows. Takes about 3 minutes.
+title: "[Claim] "
+labels: ["new-claim", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping check AI claims. Keep answers short.
+        A maintainer reads the evidence and sets the verdict before anything goes live.
+  - type: input
+    id: claim
+    attributes:
+      label: The claim
+      description: What was claimed, in a few words.
+      placeholder: GPT-5 solved 10 open Erdős problems
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Who made it
+      placeholder: Kevin Weil, OpenAI
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: When (year and month)
+      description: Format YYYY-MM
+      placeholder: 2025-10
+    validations:
+      required: true
+  - type: input
+    id: claim_url
+    attributes:
+      label: Link to the claim
+      description: Where the claim was made, or the best report of it.
+    validations:
+      required: true
+  - type: input
+    id: verdict
+    attributes:
+      label: What the evidence shows
+      description: One sentence.
+      placeholder: It found existing solutions. The post was deleted.
+    validations:
+      required: true
+  - type: input
+    id: evidence_url
+    attributes:
+      label: Evidence link
+      description: An independent source that confirms or challenges the claim.
+    validations:
+      required: true
+  - type: input
+    id: evidence2_url
+    attributes:
+      label: Second evidence link (optional)
+  - type: dropdown
+    id: suggested
+    attributes:
+      label: Suggested verdict
+      description: The maintainer makes the final call.
+      options:
+        - Confirmed
+        - Partly true
+        - Unverified
+        - Disputed
+        - Walked back
+        - "False"
+    validations:
+      required: true

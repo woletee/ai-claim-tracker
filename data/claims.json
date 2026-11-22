@@ -1,0 +1,443 @@
+[
+ {
+  "id": "c01",
+  "date": "2017-12",
+  "claim": "AlphaZero mastered chess in 4 hours",
+  "who": "DeepMind",
+  "status": "partly",
+  "verdict": "It did pass Stockfish, but Stockfish ran with weakened settings.",
+  "detail": "AlphaZero beat Stockfish 8 with 28 wins and no losses. Chess experts noted Stockfish had a small hash table and no opening book.",
+  "sources": [
+   {
+    "label": "DeepMind",
+    "url": "https://deepmind.google/blog/alphazero-shedding-new-light-on-chess-shogi-and-go/"
+   },
+   {
+    "label": "Chess.com",
+    "url": "https://www.chess.com/news/view/google-s-alphazero-destroys-stockfish-in-100-game-match"
+   }
+  ],
+  "imagePage": "https://deepmind.google/blog/alphazero-shedding-new-light-on-chess-shogi-and-go/",
+  "image": "img/c01.jpg",
+  "imageCredit": "deepmind.google"
+ },
+ {
+  "id": "c02",
+  "date": "2023-03",
+  "claim": "GPT-4 scored in the 90th percentile on the bar exam",
+  "who": "OpenAI",
+  "status": "partly",
+  "verdict": "Closer to the 48th–69th percentile against typical test-takers.",
+  "detail": "A peer-reviewed re-analysis found OpenAI compared against a February pool skewed to repeat takers. Against first-time takers it was about the 62nd percentile.",
+  "sources": [
+   {
+    "label": "Artificial Intelligence and Law",
+    "url": "https://link.springer.com/article/10.1007/s10506-024-09396-9"
+   },
+   {
+    "label": "Fast Company",
+    "url": "https://www.fastcompany.com/91073277/did-openais-gpt-4-really-pass-the-bar-exam"
+   }
+  ],
+  "imagePage": "https://openai.com/index/gpt-4-research/",
+  "image": "img/c02.jpg",
+  "imageCredit": "openai.com"
+ },
+ {
+  "id": "c03",
+  "date": "2023-11",
+  "claim": "GNoME discovered 2.2 million new materials",
+  "who": "Google DeepMind",
+  "status": "disputed",
+  "verdict": "Chemists found little evidence the compounds are novel and useful.",
+  "detail": "A UC Santa Barbara review found scant evidence of compounds that are new, credible and useful. DeepMind stands by the paper.",
+  "sources": [
+   {
+    "label": "Nature",
+    "url": "https://www.nature.com/articles/s41586-023-06735-9"
+   },
+   {
+    "label": "The Register",
+    "url": "https://www.theregister.com/2024/04/11/google_deepmind_material_study/"
+   }
+  ],
+  "imagePage": "https://deepmind.google/blog/millions-of-new-materials-discovered-with-deep-learning/",
+  "image": "img/c03.jpg",
+  "imageCredit": "deepmind.google"
+ },
+ {
+  "id": "c04",
+  "date": "2023-11",
+  "claim": "A robot lab made 41 new compounds in 17 days",
+  "who": "Berkeley Lab (A-Lab)",
+  "status": "walked-back",
+  "verdict": "Corrected: the compounds were new to the lab, not to science.",
+  "detail": "Outside chemists found most products were misidentified. The paper's correction now reports 36 of 57 targets and drops the novelty claim.",
+  "sources": [
+   {
+    "label": "The Register",
+    "url": "https://www.theregister.com/2024/01/31/ai_chemistry_research_disputed/"
+   }
+  ],
+  "imagePage": "https://www.theregister.com/2024/01/31/ai_chemistry_research_disputed/",
+  "image": "img/c04.jpg",
+  "imageCredit": "theregister.com"
+ },
+ {
+  "id": "c05",
+  "date": "2023-12",
+  "claim": "Gemini responds to live video and voice in real time",
+  "who": "Google",
+  "status": "walked-back",
+  "verdict": "Google admitted the demo used still frames and text prompts.",
+  "detail": "The hands-on video was edited. Google confirmed it was not real time and that the voice prompts were dubbed in afterwards.",
+  "sources": [
+   {
+    "label": "TechCrunch",
+    "url": "https://techcrunch.com/2023/12/07/googles-best-gemini-demo-was-faked/"
+   },
+   {
+    "label": "Engadget",
+    "url": "https://www.engadget.com/google-admits-that-a-gemini-ai-demo-video-was-staged-055718855.html"
+   }
+  ],
+  "imagePage": "https://techcrunch.com/2023/12/07/googles-best-gemini-demo-was-faked/",
+  "image": "img/c05.jpg",
+  "imageCredit": "techcrunch.com"
+ },
+ {
+  "id": "c06",
+  "date": "2024-02",
+  "claim": "Klarna's AI assistant does the work of 700 agents",
+  "who": "Klarna",
+  "status": "walked-back",
+  "verdict": "Klarna later said quality suffered and hired humans back.",
+  "detail": "The CEO said cost had been too big a factor and service quality dropped. Klarna began hiring human agents again in 2025.",
+  "sources": [
+   {
+    "label": "Entrepreneur",
+    "url": "https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396"
+   }
+  ],
+  "imagePage": "https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396",
+  "image": "img/c06.jpg",
+  "imageCredit": "entrepreneur.com",
+  "imageFit": "contain"
+ },
+ {
+  "id": "c07",
+  "date": "2024-03",
+  "claim": "Devin, the first AI software engineer, completes real Upwork jobs",
+  "who": "Cognition",
+  "status": "disputed",
+  "verdict": "Critics showed the demo task wasn't what the client asked for.",
+  "detail": "A developer's breakdown found Devin did different work than requested and took hours on a 30-minute task. Cognition said Devin often makes mistakes.",
+  "sources": [
+   {
+    "label": "The Register",
+    "url": "https://www.theregister.com/2025/01/23/ai_developer_devin_poor_reviews"
+   }
+  ],
+  "imagePage": "https://www.theregister.com/2025/01/23/ai_developer_devin_poor_reviews",
+  "image": "img/c07.jpg",
+  "imageCredit": "theregister.com"
+ },
+ {
+  "id": "c08",
+  "date": "2024-04",
+  "claim": "Just Walk Out stores run on computer vision",
+  "who": "Amazon",
+  "status": "disputed",
+  "verdict": "Reports say 1,000 workers in India reviewed most sales. Amazon denies it.",
+  "detail": "The Information reported 700 of every 1,000 sales needed human review in 2022. Amazon says the team mainly labels data for training.",
+  "sources": [
+   {
+    "label": "Axios",
+    "url": "https://www.axios.com/2024/04/17/amazon-walk-out-store-technology-grocery-expansion"
+   }
+  ],
+  "imagePage": "https://business-standard.com/companies/news/amazon-s-just-walk-out-checkout-tech-was-powered-by-1-000-indian-workers-124040400463_1.html",
+  "image": "img/c08.jpg",
+  "imageCredit": "business-standard.com",
+  "imageFit": "contain"
+ },
+ {
+  "id": "c09",
+  "date": "2024-08",
+  "claim": "AI upgrades saved Amazon 4,500 developer-years",
+  "who": "Andy Jassy, Amazon",
+  "status": "unverified",
+  "verdict": "Amazon's own estimate; no independent audit.",
+  "detail": "Amazon says Java upgrades went from 50 days to hours per app. The figures come from internal estimates.",
+  "sources": [
+   {
+    "label": "AWS",
+    "url": "https://aws.amazon.com/blogs/devops/amazon-q-developer-just-reached-a-260-million-dollar-milestone/"
+   }
+  ],
+  "imagePage": "https://aws.amazon.com/blogs/devops/amazon-q-developer-just-reached-a-260-million-dollar-milestone/",
+  "image": "img/c09.jpg",
+  "imageCredit": "aws.amazon.com"
+ },
+ {
+  "id": "c10",
+  "date": "2025-02",
+  "claim": "AI CUDA Engineer makes code 10–100x faster",
+  "who": "Sakana AI",
+  "status": "walked-back",
+  "verdict": "The system cheated its own tests. Sakana apologized.",
+  "detail": "Users found a 3x slowdown. Sakana admitted the model exploited the evaluation code and revised its paper.",
+  "sources": [
+   {
+    "label": "TechCrunch",
+    "url": "https://techcrunch.com/?p=2969225"
+   },
+   {
+    "label": "Import AI",
+    "url": "https://jack-clark.net/2025/02/24/import-ai-401-cheating-reasoning-models-better-cuda-kernels-via-ai-life-models/"
+   }
+  ],
+  "imagePage": "https://sakana.ai/ai-cuda-engineer/",
+  "image": "img/c10.jpg",
+  "imageCredit": "sakana.ai"
+ },
+ {
+  "id": "c11",
+  "date": "2025-02",
+  "claim": "AI co-scientist matched 10 years of lab work in 2 days",
+  "who": "Google",
+  "status": "confirmed",
+  "verdict": "Its top hypothesis matched the lab's finding, later published in Cell.",
+  "detail": "The Imperial College team had unpublished data; Google confirmed no leak. Other models failed the same test.",
+  "sources": [
+   {
+    "label": "Google Research",
+    "url": "https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/"
+   },
+   {
+    "label": "IEEE Spectrum",
+    "url": "https://spectrum.ieee.org/ai-co-scientist"
+   }
+  ],
+  "imagePage": "https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/",
+  "image": "img/c11.jpg",
+  "imageCredit": "research.google"
+ },
+ {
+  "id": "c12",
+  "date": "2025-05",
+  "claim": "Builder.ai's AI, Natasha, builds apps for you",
+  "who": "Builder.ai",
+  "status": "false",
+  "verdict": "Reporting found about 700 engineers did the work. The company collapsed.",
+  "detail": "Builder.ai entered insolvency in May 2025. Reports say engineers coded projects presented as AI-made.",
+  "sources": [
+   {
+    "label": "The Register",
+    "url": "https://www.theregister.com/2025/05/21/builderai_insolvency/"
+   },
+   {
+    "label": "eWeek",
+    "url": "https://www.eweek.com/news/builderai-bankruptcy-ai-developers-coding/"
+   }
+  ],
+  "imagePage": "https://www.eweek.com/news/builderai-bankruptcy-ai-developers-coding/",
+  "image": "img/c12.jpg",
+  "imageCredit": "eweek.com",
+  "imageFit": "contain"
+ },
+ {
+  "id": "c13",
+  "date": "2025-06",
+  "claim": "AI diagnoses complex cases 4x better than doctors",
+  "who": "Microsoft (MAI-DxO)",
+  "status": "partly",
+  "verdict": "The peer-reviewed gap is about 2.3x, against restricted doctors.",
+  "detail": "Doctors worked without references, colleagues or specialists. The Science version reports 83% vs 36%.",
+  "sources": [
+   {
+    "label": "Fortune",
+    "url": "https://fortune.com/2025/07/03/microsoft-ai-diagnostic-orchestrator-diagnosing-complex-cases-medical-doctors/"
+   }
+  ],
+  "imagePage": "https://fortune.com/2025/07/03/microsoft-ai-diagnostic-orchestrator-diagnosing-complex-cases-medical-doctors/",
+  "image": "img/c13.jpg",
+  "imageCredit": "fortune.com"
+ },
+ {
+  "id": "c14",
+  "date": "2025-07",
+  "claim": "AI tools made experienced developers 19% slower",
+  "who": "METR",
+  "status": "confirmed",
+  "verdict": "A randomized trial with 246 real tasks found it.",
+  "detail": "Developers believed AI sped them up by 20%. The authors warn it covers early-2025 tools and expert devs on familiar code.",
+  "sources": [
+   {
+    "label": "METR",
+    "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+   }
+  ],
+  "imagePage": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/",
+  "image": "img/c14.jpg",
+  "imageCredit": "metr.org"
+ },
+ {
+  "id": "c15",
+  "date": "2025-07",
+  "claim": "An AI won gold at the Math Olympiad",
+  "who": "Google DeepMind, OpenAI",
+  "status": "confirmed",
+  "verdict": "DeepMind's proofs were graded by official IMO coordinators.",
+  "detail": "Gemini Deep Think scored 35 of 42 in contest time. OpenAI's same score was graded by former medalists, not the IMO.",
+  "sources": [
+   {
+    "label": "DeepMind",
+    "url": "https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/"
+   }
+  ],
+  "imagePage": "https://deepmind.google/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/",
+  "image": "img/c15.jpg",
+  "imageCredit": "deepmind.google"
+ },
+ {
+  "id": "c16",
+  "date": "2025-08",
+  "claim": "95% of generative AI pilots fail",
+  "who": "MIT NANDA",
+  "status": "disputed",
+  "verdict": "Critics say the number isn't explained and measures something narrower.",
+  "detail": "The figure comes from a funnel of task-specific tools reaching production. The report calls itself preliminary.",
+  "sources": [
+   {
+    "label": "BigDATAwire",
+    "url": "https://www.hpcwire.com/bigdatawire/2025/09/04/mit-report-flags-95-genai-failure-rate-but-critics-say-it-oversimplifies/"
+   }
+  ],
+  "imagePage": "https://finance.yahoo.com/news/mit-report-95-generative-ai-105412686.html",
+  "image": "img/c16.jpg",
+  "imageCredit": "finance.yahoo.com"
+ },
+ {
+  "id": "c17",
+  "date": "2025-10",
+  "claim": "GPT-5 solved 10 open Erdős problems",
+  "who": "Kevin Weil, OpenAI",
+  "status": "walked-back",
+  "verdict": "It found existing solutions. The post was deleted.",
+  "detail": "The site's maintainer said 'open' only meant he didn't know of a solution. GPT-5 had located papers that already solved them.",
+  "sources": [
+   {
+    "label": "TechCrunch",
+    "url": "https://techcrunch.com/2025/10/19/openais-embarrassing-math/"
+   }
+  ],
+  "imagePage": "https://techcrunch.com/2025/10/19/openais-embarrassing-math/",
+  "image": "img/c17.jpg",
+  "imageCredit": "techcrunch.com",
+  "imageFit": "contain"
+ },
+ {
+  "id": "c18",
+  "date": "2026-01",
+  "claim": "Agents built a web browser from scratch in a week",
+  "who": "Cursor",
+  "status": "disputed",
+  "verdict": "It renders pages, but builds failed and code reuse was questioned.",
+  "detail": "Over 1M lines were written. Reviewers found failing builds; critics said it leaned on Servo, which Cursor denies.",
+  "sources": [
+   {
+    "label": "Simon Willison",
+    "url": "https://simonwillison.net/2026/Jan/23/fastrender/"
+   },
+   {
+    "label": "The Register",
+    "url": "https://www.theregister.com/2026/01/26/cursor_opinion/"
+   }
+  ],
+  "imagePage": "https://cursor.com/blog/scaling-agents",
+  "image": "img/c18.jpg",
+  "imageCredit": "cursor.com"
+ },
+ {
+  "id": "c19",
+  "date": "2026-04",
+  "claim": "An amateur solved Erdős #1196 with one prompt",
+  "who": "Liam Price, GPT-5.4 Pro",
+  "status": "confirmed",
+  "verdict": "Mathematicians checked it and it was verified in Lean.",
+  "detail": "The 60-year-old problem is marked solved. Experts said the approach surprised them.",
+  "sources": [
+   {
+    "label": "Scientific American",
+    "url": "https://scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem"
+   }
+  ],
+  "imagePage": "https://scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem",
+  "image": "img/c19.jpg",
+  "imageCredit": "scientificamerican.com",
+  "imageFit": "contain"
+ },
+ {
+  "id": "c20",
+  "date": "2026-06",
+  "claim": "AI cut a 231-day migration to 13 days",
+  "who": "Salesforce",
+  "status": "unverified",
+  "verdict": "Self-reported; 231 days is an estimate, not a measurement.",
+  "detail": "33 API endpoints were moved using Claude Code. No independent check of the numbers.",
+  "sources": [
+   {
+    "label": "Salesforce",
+    "url": "https://www.salesforce.com/news/stories/how-engineering-became-agentic/"
+   }
+  ],
+  "imagePage": "https://www.salesforce.com/news/stories/how-engineering-became-agentic/",
+  "image": "img/c20.jpg",
+  "imageCredit": "salesforce.com"
+ },
+ {
+  "id": "c21",
+  "date": "2026-07",
+  "claim": "Bun was rewritten from Zig to Rust in 11 days",
+  "who": "Jarred Sumner (Bun)",
+  "status": "confirmed",
+  "verdict": "It shipped as Bun 1.4 and passed the full test suite.",
+  "detail": "64 Claude agents ported ~535,000 lines. Zig's creator called it unreviewed.",
+  "sources": [
+   {
+    "label": "Bun",
+    "url": "https://bun.com/blog/bun-in-rust"
+   },
+   {
+    "label": "InfoQ",
+    "url": "https://www.infoq.com/news/2026/09/bun-ai-rewrite-zig-rust-4-months/"
+   }
+  ],
+  "imagePage": "https://bun.com/blog/bun-in-rust",
+  "image": "img/c21.jpg",
+  "imageCredit": "bun.com"
+ },
+ {
+  "id": "c22",
+  "date": "2026-09",
+  "claim": "Claude agents discovered a new enzyme system",
+  "who": "Anthropic",
+  "status": "partly",
+  "verdict": "The system is real, but its function is unknown.",
+  "detail": "Found in 21 hours by ~950 agents. A similar system was found earlier at Stanford, and 10 reruns missed it.",
+  "sources": [
+   {
+    "label": "Anthropic",
+    "url": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system"
+   },
+   {
+    "label": "The Next Web",
+    "url": "https://thenextweb.com/news/anthropic-claude-enzyme-system-crispr-like-repeats"
+   }
+  ],
+  "imagePage": "https://www.anthropic.com/research/claude-discovers-novel-enzyme-system",
+  "image": "img/c22.jpg",
+  "imageCredit": "anthropic.com"
+ }
+]
