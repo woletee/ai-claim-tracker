@@ -28,10 +28,8 @@ FIELDS = {
     "Evidence link": "evidence_url", "Second evidence link (optional)": "evidence2_url",
     "Suggested verdict": "suggested",
 }
-SUGGESTED = {"Confirmed": "confirmed", "Partly true": "partly", "Unverified": "unverified",
-             "Disputed": "disputed", "Walked back": "walked-back", "False": "false"}
-LABEL_STATUS = {"confirmed": "confirmed", "partly-true": "partly", "unverified": "unverified",
-                "disputed": "disputed", "walked-back": "walked-back", "false": "false"}
+SUGGESTED = {"Confirmed": "confirmed", "Unverified": "unverified", "Disputed": "disputed"}
+LABEL_STATUS = {"confirmed": "confirmed", "unverified": "unverified", "disputed": "disputed"}
 LIMITS = {"claim": 90, "who": 60, "verdict": 140}
 REQUIRED = ["claim", "who", "date", "claim_url", "verdict", "evidence_url"]
 
@@ -136,7 +134,7 @@ def check(event):
         lines += ["Please edit the issue to fix these:", *[f"- {p}" for p in problems], ""]
     else:
         lines += ["The form looks complete. A maintainer will read the evidence, add a verdict label "
-                  "(`confirmed`, `partly-true`, `unverified`, `disputed`, `walked-back` or `false`) and `approved`. "
+                  "(`confirmed`, `unverified`, or `disputed`) and `approved`. "
                   "The site updates automatically after that.", ""]
     if reach:
         lines += ["Link check:", *reach]
@@ -151,7 +149,7 @@ def add(event):
     labels = {l["name"] for l in issue.get("labels", [])}
     status = next((LABEL_STATUS[l] for l in LABEL_STATUS if l in labels), None)
     if not status:
-        problems.append("add a verdict label (`confirmed`, `partly-true`, `unverified`, `disputed`, `walked-back` or `false`) before `approved`")
+        problems.append("add a verdict label (`confirmed`, `unverified`, or `disputed`) before `approved`")
     if problems:
         write_comment("Could not add this claim:\n" + "\n".join(f"- {p}" for p in problems))
         return 1

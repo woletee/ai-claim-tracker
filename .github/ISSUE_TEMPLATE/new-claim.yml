@@ -64,10 +64,7 @@ body:
       description: The maintainer makes the final call.
       options:
         - Confirmed
-        - Partly true
         - Unverified
         - Disputed
-        - Walked back
-        - "False"
     validations:
       required: true

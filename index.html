@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI Claim Tracker</title>
-<meta name="description" content="Big AI claims, checked against the evidence. Every verdict links to its sources.">
+<meta name="description" content="Viral AI discoveries and creations, checked against the evidence. Every verdict links to its sources.">
 <link rel="canonical" href="https://woletee.github.io/ai-claim-tracker/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="AI Claim Tracker">
 <meta property="og:title" content="AI Claim Tracker">
-<meta property="og:description" content="Big AI claims, checked against the evidence. Every verdict links to its sources.">
+<meta property="og:description" content="Viral AI discoveries and creations, checked against the evidence. Every verdict links to its sources.">
 <meta property="og:url" content="https://woletee.github.io/ai-claim-tracker/">
 <meta property="og:image" content="https://woletee.github.io/ai-claim-tracker/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="AI Claim Tracker — Big AI claims, checked against the evidence.">
+<meta property="og:image:alt" content="AI Claim Tracker — Viral AI discoveries and creations, checked against the evidence.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Claim Tracker">
-<meta name="twitter:description" content="Big AI claims, checked against the evidence. Every verdict links to its sources.">
+<meta name="twitter:description" content="Viral AI discoveries and creations, checked against the evidence. Every verdict links to its sources.">
 <meta name="twitter:image" content="https://woletee.github.io/ai-claim-tracker/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -28,7 +28,7 @@
 :root{
   --bg:#f4f3ef; --paper:#fafaf7; --fg:#111; --muted:#6a6964; --rule:#d6d4cd; --line:#111;
   --pill:#111; --pill-fg:#f4f3ef;
-  --ok:#1d7a46; --part:#a86a00; --unv:#6b6f76; --disp:#c4500f; --back:#b3261e; --false:#7a1020;
+  --ok:#1d7a46; --unv:#6b6f76; --disp:#c4500f;
   --display:"Raleway","Century Gothic","Avenir Next",sans-serif;
   --body:"Raleway","Avenir Next",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
@@ -37,11 +37,11 @@
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#111; --paper:#161616; --fg:#f0efea; --muted:#9a9993; --rule:#2c2b29; --line:#f0efea;
   --pill:#f0efea; --pill-fg:#111;
-  --ok:#5cc98a; --part:#e7b04a; --unv:#a4a9b1; --disp:#f08a4b; --back:#ff7a6e; --false:#ff8fa0; color-scheme:dark}}
+  --ok:#5cc98a; --unv:#a4a9b1; --disp:#f08a4b; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#111; --paper:#161616; --fg:#f0efea; --muted:#9a9993; --rule:#2c2b29; --line:#f0efea;
   --pill:#f0efea; --pill-fg:#111;
-  --ok:#5cc98a; --part:#e7b04a; --unv:#a4a9b1; --disp:#f08a4b; --back:#ff7a6e; --false:#ff8fa0; color-scheme:dark}
+  --ok:#5cc98a; --unv:#a4a9b1; --disp:#f08a4b; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -109,7 +109,7 @@ h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:mi
 
   <h1>AI Claim Tracker</h1>
   <div class="dek">
-    <p>Big AI claims, checked against the evidence.</p>
+    <p>Viral AI discoveries and creations, checked against the evidence.</p>
     <div class="dek-right"><div class="stats" id="stats"></div><a class="suggest" href="https://github.com/woletee/ai-claim-tracker/issues/new?template=new-claim.yml" target="_blank" rel="noopener">+ Submit a claim</a></div>
   </div>
 
@@ -120,7 +120,7 @@ h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:mi
   <div class="grid" id="grid"></div>
 
   <footer class="fine">
-    <span>Every verdict links to its sources. Checked 22 Nov 2026.</span>
+    <span>Every verdict links to its sources. Checked 27 Nov 2026.</span>
     <span>Images: each source's own, credited per card.</span>
   </footer>
 </div>
@@ -128,11 +128,8 @@ h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:mi
 <script>
 const STATUS={
   "confirmed":{label:"Confirmed",c:"--ok",def:"Independent evidence supports it."},
-  "partly":{label:"Partly true",c:"--part",def:"True in part, or overstated."},
-  "unverified":{label:"Unverified",c:"--unv",def:"Only the claimant's own numbers so far."},
-  "disputed":{label:"Disputed",c:"--disp",def:"Credible experts challenge it."},
-  "walked-back":{label:"Walked back",c:"--back",def:"The claimant retracted or corrected it."},
-  "false":{label:"False",c:"--false",def:"Evidence shows it wasn't true."}
+  "unverified":{label:"Unverified",c:"--unv",def:"Only the creator's own numbers so far."},
+  "disputed":{label:"Disputed",c:"--disp",def:"Credible experts challenge it."}
 };
 const ORDER=Object.keys(STATUS);
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
