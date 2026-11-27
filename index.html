@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI Claim Tracker</title>
 <meta name="description" content="Big AI claims, checked against the evidence. Every verdict links to its sources.">
+<link rel="canonical" href="https://woletee.github.io/ai-claim-tracker/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Claim Tracker">
+<meta property="og:title" content="AI Claim Tracker">
+<meta property="og:description" content="Big AI claims, checked against the evidence. Every verdict links to its sources.">
+<meta property="og:url" content="https://woletee.github.io/ai-claim-tracker/">
+<meta property="og:image" content="https://woletee.github.io/ai-claim-tracker/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI Claim Tracker — Big AI claims, checked against the evidence.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Claim Tracker">
+<meta name="twitter:description" content="Big AI claims, checked against the evidence. Every verdict links to its sources.">
+<meta name="twitter:image" content="https://woletee.github.io/ai-claim-tracker/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -36,8 +52,9 @@ img{max-width:100%}
 a{color:inherit}
 
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.1em}
-.top a{text-decoration:none}
+.top a{text-decoration:none;text-align:right}
 .top a:hover{text-decoration:underline}
+.nowrap{white-space:nowrap}
 
 h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:min(calc((100vw - 40px) / 6.9),10.5rem);line-height:.95;margin:24px 0 16px;white-space:nowrap}
 .dek{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap;margin-bottom:28px;font-size:14px}
@@ -52,10 +69,11 @@ h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:mi
 .pills{display:flex;flex-wrap:wrap;gap:6px}
 .pills button{font:600 12px var(--body);color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:999px;padding:4px 12px;cursor:pointer}
 .pills button[aria-pressed="true"]{background:var(--pill);color:var(--pill-fg)}
-.pills button:focus-visible,.card summary:focus-visible,.suggest:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.pills button:focus-visible,.card summary:focus-visible,.suggest:focus-visible,.more a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
 
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--rule)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;border-top:1px solid var(--line);border-left:1px solid var(--rule)}
 .card{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:16px;display:flex;flex-direction:column;gap:12px;min-width:0;background:var(--paper)}
+.card.targeted{outline:2px solid var(--line);outline-offset:-2px}
 .card .row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px}
 .card .date{font-family:var(--mono);color:var(--muted)}
 .tag{font-size:11px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:1px 9px;white-space:nowrap}
@@ -65,11 +83,12 @@ h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:mi
 .verdict-word{display:block;font-family:var(--display);font-weight:300;font-size:36px;letter-spacing:-.03em;line-height:1;color:var(--c)}
 .card h2{font-size:17px;line-height:1.3;margin:0;font-weight:600;text-wrap:balance}
 .card .short{margin:0;font-size:13px;color:var(--muted);margin-top:-6px}
-.card details{margin-top:auto;border-top:1px solid var(--rule);padding-top:10px}
+.card details{border-top:1px solid var(--rule);padding-top:10px}
 .card summary{cursor:pointer;list-style:none;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:8px}
 .card summary::-webkit-details-marker{display:none}
 .card summary::after{content:"+";font-family:var(--mono);font-size:14px;line-height:1}
 .card details[open] summary::after{content:"–"}
+.card details[open] .t-open,.card details:not([open]) .t-close{display:none}
 .more{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px;margin-top:10px;font-size:13.5px}
 .more .k{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;padding-top:2px}
 .more a{text-underline-offset:2px}
@@ -85,7 +104,7 @@ h1{font-family:var(--display);font-weight:200;letter-spacing:-.04em;font-size:mi
 <div class="wrap">
   <header class="top">
     <span>AI Claim Tracker</span>
-    <a href="https://woletee.github.io/fast-with-ai/">Sister site: Fast, With AI ↗</a>
+    <a href="https://woletee.github.io/fast-with-ai/">Sister site: Fast, With <span class="nowrap">AI&nbsp;↗</span></a>
   </header>
 
   <h1>AI Claim Tracker</h1>
@@ -125,24 +144,81 @@ const grid=document.getElementById("grid"), pills=document.getElementById("pills
 function card(x){
   const st=STATUS[x.status]||STATUS.unverified;
   const img=x.image?`<img src="${esc(x.image)}" alt="Image for: ${esc(x.claim)}" class="${x.imageFit==="contain"?"contain":""}" loading="lazy" onerror="this.remove()">`:"";
-  return `<article class="card" style="--c:var(${st.c})">
+  return `<article class="card" id="${esc(x.id)}" style="--c:var(${st.c})">
     <div class="row"><span class="date">${fmt(x.date)}</span><span class="tag">${esc(x.who)}</span></div>
     <div class="art">${img}</div>
     <span class="verdict-word">${st.label}</span>
     <h2>“${esc(x.claim)}”</h2>
     <p class="short">${esc(x.verdict)}</p>
-    <details><summary><span>Read more</span></summary>
+    <details><summary aria-expanded="false"><span class="t-open">Read more</span><span class="t-close">Read less</span></summary>
       <div class="more">
         <span class="k">Verdict</span><span>${st.label}: ${st.def}</span>
         <span class="k">Found</span><span>${esc(x.detail)}</span>
         <span class="k">Source</span><span>${(x.sources||[]).map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join(" · ")}</span>
         ${x.image?`<span class="k">Image</span><span><a href="${esc(x.imagePage)}" target="_blank" rel="noopener">${esc(x.imageCredit)}</a></span>`:""}
+        <span class="k">Link</span><span><a class="permalink" href="#${esc(x.id)}" data-id="${esc(x.id)}">Copy link</a></span>
       </div></details>
   </article>`;
+}
+function syncUrl(hashId){
+  const u=new URL(location.href);
+  if(current==="all") u.searchParams.delete("verdict");
+  else u.searchParams.set("verdict",current);
+  u.hash=hashId?`#${hashId}`:"";
+  history.replaceState(null,"",u.pathname+u.search+u.hash);
+}
+function wireCards(){
+  grid.querySelectorAll(".card").forEach(el=>{
+    const id=el.id;
+    const d=el.querySelector("details");
+    const s=el.querySelector("summary");
+    if(!d||!s) return;
+    d.addEventListener("toggle",()=>{
+      s.setAttribute("aria-expanded",d.open?"true":"false");
+      if(d.open) syncUrl(id);
+      else if(location.hash===`#${id}`) syncUrl("");
+    });
+    d.addEventListener("keydown",e=>{
+      if(e.key==="Escape"&&d.open){e.preventDefault();d.open=false;s.focus();}
+    });
+    const link=el.querySelector(".permalink");
+    if(link) link.addEventListener("click",e=>{
+      if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey) return;
+      e.preventDefault();
+      syncUrl(id);
+      const full=new URL(`#${id}`,location.href).href;
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(full).then(()=>{
+          const prev=link.textContent;
+          link.textContent="Copied!";
+          setTimeout(()=>{link.textContent=prev;},1500);
+        }).catch(()=>{});
+      }
+    });
+  });
 }
 function render(){
   grid.innerHTML=C.filter(x=>current==="all"||x.status===current).sort((a,b)=>b.date.localeCompare(a.date)).map(card).join("");
   pills.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===current?"true":"false"));
+  wireCards();
+}
+function applyUrlState(scroll){
+  const params=new URLSearchParams(location.search);
+  const v=params.get("verdict");
+  current=(v&&STATUS[v])?v:"all";
+  const hashId=location.hash.replace(/^#/,"");
+  const targetClaim=hashId?C.find(x=>x.id===hashId):null;
+  if(targetClaim&&current!=="all"&&targetClaim.status!==current) current="all";
+  render();
+  if(targetClaim){
+    const el=document.getElementById(targetClaim.id);
+    if(el){
+      const d=el.querySelector("details");
+      if(d) d.open=true;
+      el.classList.add("targeted");
+      if(scroll) el.scrollIntoView({behavior:"smooth",block:"center"});
+    }
+  }
 }
 function setup(){
   const years=C.map(x=>+x.date.slice(0,4));
@@ -150,8 +226,16 @@ function setup(){
   const used=ORDER.filter(s=>C.some(x=>x.status===s));
   pills.innerHTML=`<button id="f-all" data-s="all" aria-pressed="true">All</button>`+
     used.map(s=>`<button id="f-${s}" data-s="${s}" title="${STATUS[s].def}" aria-pressed="false">${STATUS[s].label}</button>`).join("");
-  pills.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{current=b.dataset.s;render();}));
-  render();
+  pills.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    current=b.dataset.s;
+    const hashId=location.hash.replace(/^#/,"");
+    const keepHash=hashId&&C.some(x=>x.id===hashId&&(current==="all"||x.status===current));
+    render();
+    syncUrl(keepHash?hashId:"");
+  }));
+  window.addEventListener("hashchange",()=>applyUrlState(true));
+  window.addEventListener("popstate",()=>applyUrlState(false));
+  applyUrlState(true);
 }
 fetch("data/claims.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{C=d;setup();})
   .catch(()=>{grid.innerHTML='<p style="padding:16px">Could not load the claims. Refresh to try again.</p>';});
