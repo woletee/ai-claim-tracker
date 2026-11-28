@@ -1,26 +1,26 @@
-name: Submit a claim
-description: Add a big AI claim and what the evidence shows. Takes about 3 minutes.
-title: "[Claim] "
+name: Submit an entry
+description: Add a notable AI discovery or creation with its sources. Takes about 3 minutes.
+title: "[Entry] "
 labels: ["new-claim", "needs-review"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping check AI claims. Keep answers short.
-        A maintainer reads the evidence and sets the verdict before anything goes live.
+        Thanks for submitting an AI discovery or creation. Keep answers short.
+        A maintainer reviews the sources before anything goes live.
   - type: input
     id: claim
     attributes:
-      label: The claim
-      description: What was claimed, in a few words.
-      placeholder: GPT-5 solved 10 open Erdős problems
+      label: What was built or discovered
+      description: Short headline, in a few words.
+      placeholder: Bun was rewritten from Zig to Rust in 11 days
     validations:
       required: true
   - type: input
     id: who
     attributes:
       label: Who made it
-      placeholder: Kevin Weil, OpenAI
+      placeholder: Jarred Sumner (Bun)
     validations:
       required: true
   - type: input
@@ -28,43 +28,32 @@ body:
     attributes:
       label: When (year and month)
       description: Format YYYY-MM
-      placeholder: 2025-10
+      placeholder: 2026-07
     validations:
       required: true
   - type: input
     id: claim_url
     attributes:
-      label: Link to the claim
-      description: Where the claim was made, or the best report of it.
+      label: Link to the announcement or post
+      description: Where it was announced or shared.
     validations:
       required: true
   - type: input
     id: verdict
     attributes:
-      label: What the evidence shows
+      label: Short summary
       description: One sentence.
-      placeholder: It found existing solutions. The post was deleted.
+      placeholder: It shipped as Bun 1.4 and passed the full test suite.
     validations:
       required: true
   - type: input
     id: evidence_url
     attributes:
-      label: Evidence link
-      description: An independent source that confirms or challenges the claim.
+      label: Source link
+      description: An independent source, repo, or paper.
     validations:
       required: true
   - type: input
     id: evidence2_url
     attributes:
-      label: Second evidence link (optional)
-  - type: dropdown
-    id: suggested
-    attributes:
-      label: Suggested verdict
-      description: The maintainer makes the final call.
-      options:
-        - Confirmed
-        - Unverified
-        - Disputed
-    validations:
-      required: true
+      label: Second source link (optional)

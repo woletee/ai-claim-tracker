@@ -4,7 +4,6 @@
   "date": "2023-11",
   "claim": "GNoME discovered 2.2 million new materials",
   "who": "Google DeepMind",
-  "status": "disputed",
   "verdict": "Chemists found little evidence the compounds are novel and useful.",
   "detail": "A UC Santa Barbara review found scant evidence of compounds that are new, credible and useful. DeepMind stands by the paper.",
   "sources": [
@@ -26,7 +25,6 @@
   "date": "2023-12",
   "claim": "FunSearch discovered a new solution to an open math problem",
   "who": "Google DeepMind",
-  "status": "confirmed",
   "verdict": "Published in Nature: an LLM-guided search beat human records on the cap set problem.",
   "detail": "FunSearch paired an LLM with an automated evaluator to evolve Python programs, finding larger cap sets in 8 dimensions than previously known.",
   "sources": [
@@ -48,7 +46,6 @@
   "date": "2025-01",
   "claim": "ESM3 generated a new fluorescent protein equal to 500M years of evolution",
   "who": "EvolutionaryScale",
-  "status": "confirmed",
   "verdict": "Peer-reviewed in Science: esmGFP glows in the lab with only 58% sequence identity.",
   "detail": "The 98B-parameter protein language model designed a functional green fluorescent protein far from any natural sequence, verified experimentally.",
   "sources": [
@@ -71,7 +68,6 @@
   "date": "2025-02",
   "claim": "AI co-scientist matched 10 years of lab work in 2 days",
   "who": "Google",
-  "status": "confirmed",
   "verdict": "Its top hypothesis matched the lab's finding, later published in Cell.",
   "detail": "The Imperial College team had unpublished data; Google confirmed no leak. Other models failed the same test.",
   "sources": [
@@ -93,7 +89,6 @@
   "date": "2025-02",
   "claim": "Vibe-coded a multiplayer 3D flight sim in 3 hours that hit $87k/mo",
   "who": "Pieter Levels",
-  "status": "unverified",
   "verdict": "The live browser game went viral on X; revenue figures are self-reported.",
   "detail": "Built with Cursor and Three.js, fly.pieter.com drew hundreds of thousands of players and sold in-game blimp ads. Peak MRR comes from creator posts with no independent audit.",
   "sources": [
@@ -111,7 +106,6 @@
   "date": "2025-05",
   "claim": "AlphaEvolve broke a 56-year-old matrix multiplication record",
   "who": "Google DeepMind",
-  "status": "confirmed",
   "verdict": "It found a 48-multiplication algorithm for 4x4 complex matrices, beating Strassen's 49.",
   "detail": "The Gemini-powered evolutionary coding agent beat Volker Strassen's 1969 bound and also discovered scheduling and kernel improvements used inside Google.",
   "sources": [
@@ -133,7 +127,6 @@
   "date": "2025-07",
   "claim": "An AI won gold at the Math Olympiad",
   "who": "Google DeepMind, OpenAI",
-  "status": "confirmed",
   "verdict": "DeepMind's proofs were graded by official IMO coordinators.",
   "detail": "Gemini Deep Think scored 35 of 42 in contest time. OpenAI's same score was graded by former medalists, not the IMO.",
   "sources": [
@@ -151,7 +144,6 @@
   "date": "2025-09",
   "claim": "Evo AI generated the first functional whole-genome viruses",
   "who": "Arc Institute, Stanford",
-  "status": "confirmed",
   "verdict": "16 AI-designed bacteriophage genomes replicated and lysed E. coli in the lab.",
   "detail": "Using Evo genome language models, researchers chemically synthesized ~300 candidates and recovered 16 viable phages, some outperforming natural phiX174.",
   "sources": [
@@ -174,7 +166,6 @@
   "date": "2026-01",
   "claim": "Agents built a web browser from scratch in a week",
   "who": "Cursor",
-  "status": "disputed",
   "verdict": "It renders pages, but builds failed and code reuse was questioned.",
   "detail": "Over 1M lines were written. Reviewers found failing builds; critics said it leaned on Servo, which Cursor denies.",
   "sources": [
@@ -196,7 +187,6 @@
   "date": "2026-02",
   "claim": "16 Claude agents built a Rust C compiler that compiles Linux",
   "who": "Anthropic (Nicholas Carlini)",
-  "status": "confirmed",
   "verdict": "Open-sourced in Rust; compiles bootable Linux 6.9, PostgreSQL, Redis, and Doom.",
   "detail": "Parallel Claude Opus 4.6 agents wrote 100k+ lines over two weeks. Caveats: it uses GCC for 16-bit x86 real mode and produces slower binaries than GCC or Clang.",
   "sources": [
@@ -218,7 +208,6 @@
   "date": "2026-02",
   "claim": "One engineer rebuilt Next.js on Vite with AI in a week",
   "who": "Cloudflare",
-  "status": "confirmed",
   "verdict": "Open-sourced as vinext; built for ~$1,100 in tokens and passes Next.js E2E tests.",
   "detail": "Across 800+ AI coding sessions, vinext reimplemented the Next.js API surface on Vite for Cloudflare Workers, verified with thousands of Vitest and 380+ Playwright tests.",
   "sources": [
@@ -240,7 +229,6 @@
   "date": "2026-03",
   "claim": "Autoresearch lets an AI agent run ML experiments overnight",
   "who": "Andrej Karpathy",
-  "status": "unverified",
   "verdict": "The viral open-source loop works on toy runs; real frontier gains aren't proven yet.",
   "detail": "The minimalist GitHub repo lets coding agents edit train.py in 5-minute GPU loops and keep wins via git, sparking thousands of forks on X, though independent research breakthroughs remain early.",
   "sources": [
@@ -258,7 +246,6 @@
   "date": "2026-04",
   "claim": "An amateur solved Erdős #1196 with one prompt",
   "who": "Liam Price, GPT-5.4 Pro",
-  "status": "confirmed",
   "verdict": "Mathematicians checked it and it was verified in Lean.",
   "detail": "The 60-year-old problem is marked solved. Experts said the approach surprised them.",
   "sources": [
@@ -277,7 +264,6 @@
   "date": "2026-07",
   "claim": "Bun was rewritten from Zig to Rust in 11 days",
   "who": "Jarred Sumner (Bun)",
-  "status": "confirmed",
   "verdict": "It shipped as Bun 1.4 and passed the full test suite.",
   "detail": "64 Claude agents ported ~535,000 lines. Zig's creator called it unreviewed.",
   "sources": [

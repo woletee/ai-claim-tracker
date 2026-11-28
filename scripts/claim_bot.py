@@ -23,13 +23,13 @@ DATA = ROOT / "data" / "claims.json"
 IMG = ROOT / "img"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 FIELDS = {
-    "The claim": "claim", "Who made it": "who", "When (year and month)": "date",
-    "Link to the claim": "claim_url", "What the evidence shows": "verdict",
-    "Evidence link": "evidence_url", "Second evidence link (optional)": "evidence2_url",
-    "Suggested verdict": "suggested",
+    "The claim": "claim", "What was built or discovered": "claim",
+    "Who made it": "who", "When (year and month)": "date",
+    "Link to the claim": "claim_url", "Link to the announcement or post": "claim_url",
+    "What the evidence shows": "verdict", "Short summary": "verdict",
+    "Evidence link": "evidence_url", "Source link": "evidence_url",
+    "Second evidence link (optional)": "evidence2_url", "Second source link (optional)": "evidence2_url",
 }
-SUGGESTED = {"Confirmed": "confirmed", "Unverified": "unverified", "Disputed": "disputed"}
-LABEL_STATUS = {"confirmed": "confirmed", "unverified": "unverified", "disputed": "disputed"}
 LIMITS = {"claim": 90, "who": 60, "verdict": 140}
 REQUIRED = ["claim", "who", "date", "claim_url", "verdict", "evidence_url"]
 
@@ -133,8 +133,7 @@ def check(event):
     if problems:
         lines += ["Please edit the issue to fix these:", *[f"- {p}" for p in problems], ""]
     else:
-        lines += ["The form looks complete. A maintainer will read the evidence, add a verdict label "
-                  "(`confirmed`, `unverified`, or `disputed`) and `approved`. "
+        lines += ["The form looks complete. A maintainer will review the sources and add `approved`. "
                   "The site updates automatically after that.", ""]
     if reach:
         lines += ["Link check:", *reach]
@@ -146,20 +145,16 @@ def add(event):
     issue = event["issue"]
     e = parse(issue.get("body", ""))
     problems = validate(e)
-    labels = {l["name"] for l in issue.get("labels", [])}
-    status = next((LABEL_STATUS[l] for l in LABEL_STATUS if l in labels), None)
-    if not status:
-        problems.append("add a verdict label (`confirmed`, `unverified`, or `disputed`) before `approved`")
     if problems:
-        write_comment("Could not add this claim:\n" + "\n".join(f"- {p}" for p in problems))
+        write_comment("Could not add this entry:\n" + "\n".join(f"- {p}" for p in problems))
         return 1
     claims = json.loads(DATA.read_text(encoding="utf-8"))
     cid = f"i{issue['number']}"
     if any(x.get("id") == cid for x in claims):
-        write_comment("This claim is already on the site.")
+        write_comment("This entry is already on the site.")
         return 0
     entry = {
-        "id": cid, "date": e["date"], "claim": e["claim"].strip("\"“”"), "who": e["who"], "status": status,
+        "id": cid, "date": e["date"], "claim": e["claim"].strip("\"“”"), "who": e["who"],
         "verdict": e["verdict"], "detail": e["verdict"],
         "sources": [{"label": host(e[k]), "url": e[k]} for k in ("claim_url", "evidence_url", "evidence2_url") if e.get(k)],
         "issue": issue["html_url"],
